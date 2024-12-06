@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm6ny8yu5h7jj"]
+
+[ext_resource type="Texture2D" uid="uid://cxjonspt2isat" path="res://Wizard Frog.png" id="1_dbubp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgh1g"]
+size = Vector2(20, 15)
+
+[node name="Froggy" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+scale = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_hgh1g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, -15)
+scale = Vector2(0.120543, 0.131834)
+texture = ExtResource("1_dbubp")

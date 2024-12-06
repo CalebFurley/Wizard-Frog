@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://p3euiijerig5"]
+
+[ext_resource type="PackedScene" path="res://platform.tscn" id="1_320he"]
+[ext_resource type="PackedScene" path="res://froggy.tscn" id="2_tny6h"]
+[ext_resource type="Script" path="res://froggy.gd" id="3_mk5oo"]
+
+[node name="World" type="Node2D"]
+
+[node name="Platform" parent="." instance=ExtResource("1_320he")]
+position = Vector2(205, 178)
+scale = Vector2(1000, 15)
+
+[node name="Froggy" parent="." instance=ExtResource("2_tny6h")]
+position = Vector2(3, -90)
+script = ExtResource("3_mk5oo")
+
+[node name="Camera2D" type="Camera2D" parent="Froggy"]
+position = Vector2(-3, 90)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
